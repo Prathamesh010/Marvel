@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.example.marvelclient.character.CharacterFragment"
+        android:label="CharacterFragment" />
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.example.marvelclient.characterDetail.CharacterDetailFragment"
+        android:label="CharacterDetailFragment" >
+        <argument
+            android:name="CharacterId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_characterDetailFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.marvelclient.mainFragment.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_comicDetailFragment"
+            app:destination="@id/comicDetailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_avengersFragment"
+            app:destination="@id/avengersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/comicFragment"
+        android:name="com.example.marvelclient.comic.ComicFragment"
+        android:label="ComicFragment" />
+    <fragment
+        android:id="@+id/comicDetailFragment"
+        android:name="com.example.marvelclient.comicDetail.ComicDetailFragment"
+        android:label="ComicDetailFragment" >
+        <argument
+            android:name="ComicId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_comicDetailFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/avengersFragment"
+        android:name="com.example.marvelclient.avengers.AvengersFragment"
+        android:label="AvengersFragment" >
+        <action
+            android:id="@+id/action_avengersFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Marvel</string>
+    <string name="long_text">akljsdf asdfjkals;k  asdfjkl;kasfd asddfkjladsjasddfj a
+        slkalsdkjfasfdjkasdflkjasddflkasddf
+        lasddflkjasldfasdfkja sfsflasfdadsf lsddjfl; aksjdf ll;fj
+        a sdkfasd ldkjf a;sldkjf lk;asjd flkjasdf lsfaj lkasjdjass lkdaldsfj</string>
+    <string name="descriptionText">thing\'s a Mystery,Doesn\'t have a description</string>
+    <string name="avenger_added">Avenger Added</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Description :</string>
+    <string name="more_info">More Info :</string>
+    <string name="add_avenger">Add Avenger</string>
+</resources>

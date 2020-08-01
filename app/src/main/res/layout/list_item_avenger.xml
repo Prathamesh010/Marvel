@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="avenger"
+            type="com.example.marvelclient.avengers.Avenger" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="image"
+            android:scaleType="fitXY"
+            src="@{avenger.thumbnail}"/>
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/TitleStyle"
+            android:layout_gravity="bottom|center"
+            android:gravity="center"
+            tool:text="really long name"
+            android:text="@{avenger.name}" />
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="comic"
+            type="com.example.marvelclient.model.comic.Comic" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/thumb"
+                        src="@{comic.thumbnail}"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        tools:src="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/textStyleComic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@{comic.title}"
+                        android:textSize="20sp"
+                        tools:text="The Amazing Spider man" />
+
+                    <TextView
+                        android:id="@+id/issn"
+                        style="@style/textStyleComic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
+                        android:fontFamily="@font/roboto"
+                        android:text="@{`issn: ` + comic.issn}"
+                        tools:text="issn: 0274-5232" />
+
+                    <TextView
+                        android:id="@+id/pageCount"
+                        style="@style/textStyleComic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/issn"
+                        android:text="@{`Pages: ` + comic.pageCount}"
+                        tools:text="Pages: 104" />
+
+                    <TextView
+                        style="@style/textStyleComic"
+                        listText="@{comic.prices}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pageCount"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="16dp"
+                        tools:text="PrintPrice: 7.99\nDigitalPurchasePrice: 3.99" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/textStyleComic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Images :"
+                    android:textSize="25sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/imageRecView"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    style="@style/textStyleComic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Featuring :"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="20sp"
+                    featuring="@{comic.characters.component3()}"
+                    android:text="No Information Available!"
+                    />
+
+                <TextView
+                    style="@style/textStyleComic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="More Info :"
+                    android:textSize="25sp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/infoRecView"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>
