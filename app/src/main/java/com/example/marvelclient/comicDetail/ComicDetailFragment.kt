@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.marvelclient.R
 import com.example.marvelclient.adapters.*
@@ -28,6 +30,7 @@ class ComicDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.comic_detail_fragment,container,false)
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
         val argument = arguments?.getInt("id")
 
         val urlAdapter = UrlAdapter(requireContext())
@@ -45,6 +48,10 @@ class ComicDetailFragment : Fragment() {
                 imageAdapter.submitList(it.images)
             }
         })
+
+        binding.toolbar.setNavigationOnClickListener {
+            it.findNavController().navigateUp()
+        }
 
         return binding.root
     }
