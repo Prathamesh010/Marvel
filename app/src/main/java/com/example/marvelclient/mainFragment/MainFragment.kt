@@ -22,7 +22,7 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.main_fragment,container,false)
-
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
         setupTabWithPager()
 
         setHasOptionsMenu(true)
