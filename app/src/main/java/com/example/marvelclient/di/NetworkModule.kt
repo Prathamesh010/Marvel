@@ -1,6 +1,7 @@
 package com.example.marvelclient.di
 
 import com.example.marvelclient.network.ApiClient
+import com.example.marvelclient.network.NetworkInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -13,6 +14,7 @@ val networkModule = module {
     single{
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY })
+            .addInterceptor(NetworkInterceptor())
             .build()
     }
 

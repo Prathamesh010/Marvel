@@ -8,23 +8,14 @@ import retrofit2.http.Query
 
 interface ApiClient {
     @GET("v1/public/characters")
-    suspend fun getCharacters(@Query("ts")ts:String,
-                              @Query("apikey")apikey: String,
-                              @Query("hash")hash: String,
-                              @Query("limit")limit: Int,
+    suspend fun getCharacters(@Query("limit")limit: Int,
                               @Query("orderBy")orderBy: String): CharacterResponse
 
     @GET("/v1/public/characters/{characterId}/comics")
     suspend fun getComicOfCharacter(@Path("characterId")id: String,
-                                    @Query("ts")ts:String,
-                                    @Query("apikey")apikey: String,
-                                    @Query("hash")hash: String,
                                     @Query("orderBy")orderBy: String): ComicResponse
 
     @GET("/v1/public/comics")
-    suspend fun getComic(@Query("ts")ts:String,
-                         @Query("apikey")apikey: String,
-                         @Query("hash")hash: String,
-                         @Query("limit")limit: Int,
+    suspend fun getComic(@Query("limit")limit: Int,
                          @Query("orderBy")orderBy: String): ComicResponse
 }
