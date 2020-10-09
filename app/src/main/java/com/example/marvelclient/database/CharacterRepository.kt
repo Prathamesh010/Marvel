@@ -23,7 +23,7 @@ class CharacterRepository(
 
     suspend fun refreshCharacter() {
         try {
-            val response = service.getCharacters(timeStamp, API_KEY, hash, 100,"-modified").data.results
+            val response = service.getCharacters( 100,"-modified").data.results
             for (character in response) {
                 dao.insertCharacters(characters = character)
             }
@@ -36,7 +36,7 @@ class CharacterRepository(
         try {
             return withContext(Dispatchers.IO) {
                 val response = service
-                    .getComicOfCharacter(id.toString(), timeStamp, API_KEY, hash, "-modified").data.comics
+                    .getComicOfCharacter(id.toString(), "-modified").data.comics
                 for (comic in response)
                     dao.insertComics(comic)
                 return@withContext response
