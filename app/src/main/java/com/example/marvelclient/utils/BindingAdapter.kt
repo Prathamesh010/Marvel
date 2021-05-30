@@ -1,6 +1,6 @@
 package com.example.marvelclient.utils
 
-import android.view.View.*
+import android.view.View.GONE
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -11,7 +11,6 @@ import com.example.marvelclient.R
 import com.example.marvelclient.model.Thumbnail
 import com.example.marvelclient.model.comic.Item
 import com.example.marvelclient.model.comic.Price
-import java.util.*
 
 @BindingAdapter("isGone")
 fun isGone(progressBar: ProgressBar,bool: Boolean){

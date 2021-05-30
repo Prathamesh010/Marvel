@@ -4,7 +4,6 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.marvelclient.characterDetail.tabsFragments.AboutFragment
 import com.example.marvelclient.characterDetail.tabsFragments.ComicsFragment
-import java.lang.IndexOutOfBoundsException
 
 class CharacterPagerAdapter(fragment: Fragment,private val id: Int): FragmentStateAdapter(fragment){
     private val fragments: Map<Int,() -> Fragment> = mapOf(

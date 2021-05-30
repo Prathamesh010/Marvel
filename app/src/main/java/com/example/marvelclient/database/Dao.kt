@@ -6,8 +6,8 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.marvelclient.avengers.Avenger
-import com.example.marvelclient.model.comic.Comic
 import com.example.marvelclient.model.character.Character
+import com.example.marvelclient.model.comic.Comic
 
 @Dao
 interface Dao {

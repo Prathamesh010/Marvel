@@ -8,7 +8,8 @@ import com.example.marvelclient.avengers.Avenger
 import com.example.marvelclient.database.CharacterRepository
 import com.example.marvelclient.model.character.Character
 import com.example.marvelclient.model.comic.Comic
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class CharacterDetailViewModel(
     private val repository: CharacterRepository

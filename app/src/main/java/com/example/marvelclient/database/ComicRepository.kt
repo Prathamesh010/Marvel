@@ -1,11 +1,8 @@
 package com.example.marvelclient.database
 
-import android.util.Log
 import com.example.marvelclient.network.ApiClient
-import com.example.marvelclient.utils.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import java.util.*
 
 class ComicRepository(
     private val service: ApiClient,

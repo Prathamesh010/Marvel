@@ -1,17 +1,15 @@
 package com.example.marvelclient.avengers
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.marvelclient.R
 import com.example.marvelclient.adapters.AvengersAdapter
-import com.example.marvelclient.character.CharacterViewModel
 import com.example.marvelclient.databinding.FragmentAvengersBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

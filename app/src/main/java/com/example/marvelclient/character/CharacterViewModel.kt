@@ -1,12 +1,10 @@
 package com.example.marvelclient.character
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.marvelclient.database.CharacterRepository
 import com.example.marvelclient.model.character.Character
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class CharacterViewModel(
