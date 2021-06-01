@@ -32,7 +32,7 @@ data class Comic(
     @SerializedName("issn")
     val issn: String,
     @SerializedName("issueNumber")
-    val issueNumber: Int,
+    val issueNumber: Double,
     @SerializedName("modified")
     val modified: String,
     @SerializedName("pageCount")
