@@ -3,6 +3,9 @@
 
 App made using [Marvel Api](https://developer.marvel.com)
 
+## Interface
+<img src="app.gif" width="200" height="400" />
+
 ## Tech stack & Open-source libraries
 - Made in Kotlin
 - [JetPack](https://developer.android.com/jetpack)
