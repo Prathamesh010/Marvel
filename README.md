@@ -1,4 +1,4 @@
-# Marvel
+# ![marvel banner](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/200px-Marvel_Logo.svg.png)
 [![license](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 App made using [Marvel Api](https://developer.marvel.com)
