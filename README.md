@@ -1,12 +1,19 @@
-# ![marvel banner](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/200px-Marvel_Logo.svg.png)
-[![license](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/200px-Marvel_Logo.svg.png" />
+</p>
 
-App made using [Marvel Api](https://developer.marvel.com)
+<p align="center">
+  App made using <a href="https://developer.marvel.com">Marvel Api</a>
+</p>
 
-## Interface
+<p align="center">
+  <a href="https://github.com/Prathamesh010/Marvel/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-red.svg"></a>
+</p>
+
+## 🎨 Interface
 <img src="app.gif" width="200" height="400" />
 
-## Tech stack & Open-source libraries
+## 🤖Tech stack & Open-source libraries
 - Made in Kotlin
 - [JetPack](https://developer.android.com/jetpack)
   - LiveData 
